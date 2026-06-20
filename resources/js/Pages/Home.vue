@@ -74,7 +74,7 @@ const getExcerpt = (content) => {
                     <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
                         <a href="https://lynk.id/kuapurbalingga" target="_blank" rel="noopener noreferrer"
                            class="px-8 py-3.5 bg-white text-kemenag-dark font-bold text-sm rounded-pill shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all duration-300 transform hover:-translate-y-0.5">
-                            🏛️ Akses Layanan Online
+                            <i class="fa-solid fa-landmark mr-1.5"></i> Akses Layanan Online
                         </a>
                         <a href="#layanan" 
                            class="px-8 py-3.5 bg-white/10 backdrop-blur-sm text-white font-semibold text-sm rounded-pill border border-white/30 hover:bg-white/20 transition-all duration-300">
