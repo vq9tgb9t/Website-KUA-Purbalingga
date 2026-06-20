@@ -17,32 +17,32 @@ const tugasFungsi = [
     {
         title: 'Pelaksanaan Pelayanan Nikah & Rujuk',
         desc: 'Melaksanakan pencatatan, pelayanan administrasi, dan bimbingan pernikahan serta rujuk sesuai ketentuan yang berlaku.',
-        icon: '💍',
+        icon: 'fa-solid fa-ring',
     },
     {
         title: 'Pembinaan Keluarga Sakinah',
         desc: 'Memberikan bimbingan dan konseling pra-nikah, pembinaan keluarga sakinah, serta mediasi konflik rumah tangga.',
-        icon: '👨‍👩‍👧‍👦',
+        icon: 'fa-solid fa-people-roof',
     },
     {
         title: 'Pelayanan Perwakafan',
         desc: 'Melaksanakan pendataan, pencatatan, dan pengawasan tanah wakaf serta pembinaan nazir wakaf.',
-        icon: '🕌',
+        icon: 'fa-solid fa-mosque',
     },
     {
         title: 'Pembinaan Lembaga Keagamaan',
         desc: 'Melakukan pembinaan terhadap masjid, mushalla, madrasah diniyah, dan majelis taklim di wilayah kecamatan.',
-        icon: '📚',
+        icon: 'fa-solid fa-book-open',
     },
     {
         title: 'Bimbingan Manasik Haji',
         desc: 'Menyelenggarakan bimbingan manasik haji bagi calon jamaah haji di tingkat kecamatan.',
-        icon: '🕋',
+        icon: 'fa-solid fa-kaaba',
     },
     {
         title: 'Kerukunan Umat Beragama',
         desc: 'Memfasilitasi dialog dan kerjasama antar umat beragama untuk menjaga keharmonisan di masyarakat.',
-        icon: '🤝',
+        icon: 'fa-solid fa-handshake',
     },
 ];
 
@@ -130,8 +130,8 @@ const infoKantor = {
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div v-for="(item, index) in tugasFungsi" :key="index"
                          class="group bg-gray-50 hover:bg-white rounded-2xl p-6 border border-gray-100 hover:border-kemenag/20 hover:shadow-lg transition-all duration-300">
-                        <div class="w-14 h-14 bg-kemenag/10 group-hover:bg-kemenag/15 rounded-xl flex items-center justify-center text-3xl mb-5 transition-colors">
-                            {{ item.icon }}
+                        <div class="w-14 h-14 bg-kemenag/10 group-hover:bg-kemenag/15 rounded-xl flex items-center justify-center text-2xl mb-5 transition-colors">
+                            <i :class="[item.icon, 'text-kemenag']"></i>
                         </div>
                         <h3 class="font-bold text-gray-900 text-lg mb-2 group-hover:text-kemenag transition-colors">{{ item.title }}</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">{{ item.desc }}</p>
@@ -151,7 +151,9 @@ const infoKantor = {
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-px">
                         <!-- Alamat -->
                         <div class="p-6 sm:p-8 flex items-start gap-4 bg-white">
-                            <div class="w-10 h-10 bg-kemenag/10 rounded-lg flex items-center justify-center text-lg flex-shrink-0">📍</div>
+                            <div class="w-10 h-10 bg-kemenag/10 rounded-lg flex items-center justify-center text-base flex-shrink-0">
+                                <i class="fa-solid fa-location-dot text-kemenag"></i>
+                            </div>
                             <div>
                                 <h4 class="font-semibold text-gray-900 text-sm mb-1">Alamat</h4>
                                 <p class="text-gray-600 text-sm leading-relaxed">{{ infoKantor.alamat }}</p>
@@ -159,7 +161,9 @@ const infoKantor = {
                         </div>
                         <!-- Jam Operasional -->
                         <div class="p-6 sm:p-8 flex items-start gap-4 bg-white">
-                            <div class="w-10 h-10 bg-kemenag/10 rounded-lg flex items-center justify-center text-lg flex-shrink-0">🕐</div>
+                            <div class="w-10 h-10 bg-kemenag/10 rounded-lg flex items-center justify-center text-base flex-shrink-0">
+                                <i class="fa-solid fa-clock text-kemenag"></i>
+                            </div>
                             <div>
                                 <h4 class="font-semibold text-gray-900 text-sm mb-1">Jam Operasional</h4>
                                 <p class="text-gray-600 text-sm">{{ infoKantor.jamOperasional }}</p>
@@ -168,7 +172,9 @@ const infoKantor = {
                         </div>
                         <!-- Telepon -->
                         <div class="p-6 sm:p-8 flex items-start gap-4 bg-white">
-                            <div class="w-10 h-10 bg-kemenag/10 rounded-lg flex items-center justify-center text-lg flex-shrink-0">📞</div>
+                            <div class="w-10 h-10 bg-kemenag/10 rounded-lg flex items-center justify-center text-base flex-shrink-0">
+                                <i class="fa-solid fa-phone text-kemenag"></i>
+                            </div>
                             <div>
                                 <h4 class="font-semibold text-gray-900 text-sm mb-1">Telepon</h4>
                                 <p class="text-gray-600 text-sm">{{ infoKantor.telepon }}</p>
@@ -176,7 +182,9 @@ const infoKantor = {
                         </div>
                         <!-- Email -->
                         <div class="p-6 sm:p-8 flex items-start gap-4 bg-white">
-                            <div class="w-10 h-10 bg-kemenag/10 rounded-lg flex items-center justify-center text-lg flex-shrink-0">📧</div>
+                            <div class="w-10 h-10 bg-kemenag/10 rounded-lg flex items-center justify-center text-base flex-shrink-0">
+                                <i class="fa-solid fa-envelope text-kemenag"></i>
+                            </div>
                             <div>
                                 <h4 class="font-semibold text-gray-900 text-sm mb-1">Email</h4>
                                 <p class="text-gray-600 text-sm">{{ infoKantor.email }}</p>

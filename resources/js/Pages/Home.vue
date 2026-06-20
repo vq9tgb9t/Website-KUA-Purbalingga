@@ -5,15 +5,15 @@ import { ref } from 'vue';
 
 // Data program layanan (9 layanan utama sesuai website lama)
 const services = [
-    { name: 'Pendaftaran Nikah', icon: '💍', desc: 'Daftar nikah secara online' },
-    { name: 'Duplikat Buku Nikah', icon: '📋', desc: 'Pengajuan duplikat buku nikah' },
-    { name: 'Bimbingan Perkawinan', icon: '👨‍👩‍👧', desc: 'Konseling pra-nikah' },
-    { name: 'Rekomendasi Nikah', icon: '📄', desc: 'Surat rekomendasi menikah' },
-    { name: 'Pendaftaran Wakaf', icon: '🕌', desc: 'Daftarkan tanah wakaf Anda' },
-    { name: 'ID Masjid / Mushalla', icon: '🏛️', desc: 'Pendataan masjid & mushalla' },
-    { name: 'Madrasah Diniyah', icon: '📚', desc: 'Informasi madrasah diniyah' },
-    { name: 'Majelis Taklim', icon: '🎓', desc: 'Pendaftaran majelis taklim' },
-    { name: 'Manasik Haji', icon: '🕋', desc: 'Bimbingan manasik haji' },
+    { name: 'Pendaftaran Nikah', icon: 'fa-solid fa-ring', desc: 'Daftar nikah secara online' },
+    { name: 'Duplikat Buku Nikah', icon: 'fa-solid fa-file-contract', desc: 'Pengajuan duplikat buku nikah' },
+    { name: 'Bimbingan Perkawinan', icon: 'fa-solid fa-people-roof', desc: 'Konseling pra-nikah' },
+    { name: 'Rekomendasi Nikah', icon: 'fa-solid fa-file-invoice', desc: 'Surat rekomendasi menikah' },
+    { name: 'Pendaftaran Wakaf', icon: 'fa-solid fa-mosque', desc: 'Daftarkan tanah wakaf Anda' },
+    { name: 'ID Masjid / Mushalla', icon: 'fa-solid fa-landmark', desc: 'Pendataan masjid & mushalla' },
+    { name: 'Madrasah Diniyah', icon: 'fa-solid fa-book-open', desc: 'Informasi madrasah diniyah' },
+    { name: 'Majelis Taklim', icon: 'fa-solid fa-graduation-cap', desc: 'Pendaftaran majelis taklim' },
+    { name: 'Manasik Haji', icon: 'fa-solid fa-kaaba', desc: 'Bimbingan manasik haji' },
 ];
 
 // Menerima prop dari server (Inertia)
@@ -126,8 +126,8 @@ const getExcerpt = (content) => {
                        class="group bg-white rounded-2xl p-5 shadow-card border border-gray-100 hover:border-kemenag/30 hover:shadow-md transition-all duration-300 flex items-center gap-4"
                     >
                         <!-- Ikon -->
-                        <div class="w-12 h-12 bg-kemenag/10 group-hover:bg-kemenag/20 rounded-xl flex items-center justify-center text-2xl transition-colors shrink-0">
-                            {{ service.icon }}
+                        <div class="w-12 h-12 bg-kemenag/10 group-hover:bg-kemenag/20 rounded-xl flex items-center justify-center text-xl transition-colors shrink-0">
+                            <i :class="[service.icon, 'text-kemenag']"></i>
                         </div>
                         <!-- Text -->
                         <div>

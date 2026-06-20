@@ -124,7 +124,7 @@ const penjagaMalam = {
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-10">
                     <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-kemenag/10 rounded-full text-kemenag text-xs font-semibold mb-4">
-                        💍 Pelayanan Nikah & Rujuk
+                        <i class="fa-solid fa-ring"></i> Pelayanan Nikah & Rujuk
                     </div>
                     <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Penghulu</h2>
                     <p class="mt-2 text-sm text-gray-500 max-w-xl mx-auto">
@@ -152,7 +152,7 @@ const penjagaMalam = {
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-10">
                     <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-100 rounded-full text-amber-700 text-xs font-semibold mb-4">
-                        📚 Dakwah & Pembinaan Umat
+                        <i class="fa-solid fa-book-open"></i> Dakwah & Pembinaan Umat
                     </div>
                     <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Penyuluh Agama Islam</h2>
                     <p class="mt-2 text-sm text-gray-500 max-w-xl mx-auto">
@@ -180,7 +180,7 @@ const penjagaMalam = {
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-10">
                     <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-100 rounded-full text-blue-700 text-xs font-semibold mb-4">
-                        ⚙️ Operasional & Administrasi
+                        <i class="fa-solid fa-gears"></i> Operasional & Administrasi
                     </div>
                     <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Staf Pendukung</h2>
                     <p class="mt-2 text-sm text-gray-500 max-w-xl mx-auto">

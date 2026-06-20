@@ -20,9 +20,9 @@ const navLinks = [
 ];
 
 const kabarLinks = [
-    { label: 'Berita KUA', href: '/berita-kua', icon: '📰' },
-    { label: 'Urab Mendoan', href: '/urab-mendoan', icon: '🍲' },
-    { label: 'Artikel', href: '/artikel', icon: '📝' },
+    { label: 'Berita KUA', href: '/berita-kua', icon: 'fa-solid fa-newspaper text-kemenag' },
+    { label: 'Urab Mendoan', href: '/urab-mendoan', icon: 'fa-solid fa-bowl-food text-kemenag' },
+    { label: 'Artikel', href: '/artikel', icon: 'fa-solid fa-file-lines text-kemenag' },
 ];
 const kabarPaths = ['/berita-kua', '/urab-mendoan', '/artikel'];
 const isKabarActive = computed(() => kabarPaths.some(p => currentUrl.value.startsWith(p)) || currentUrl.value.startsWith('/kabar'));
@@ -93,7 +93,7 @@ const isActive = (href) => {
                                     :href="link.href"
                                     class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:text-kemenag hover:bg-kemenag/5 transition-colors"
                                 >
-                                    <span class="text-lg">{{ link.icon }}</span>
+                                    <span class="text-sm flex items-center justify-center w-5 h-5"><i :class="link.icon"></i></span>
                                     {{ link.label }}
                                 </Link>
                             </div>
@@ -163,7 +163,7 @@ const isActive = (href) => {
                                     @click="mobileMenuOpen = false"
                                     class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 hover:text-kemenag hover:bg-kemenag/5 rounded-lg transition-all"
                                 >
-                                    <span>{{ link.icon }}</span>
+                                    <span class="text-sm flex items-center justify-center w-5 h-5"><i :class="link.icon"></i></span>
                                     {{ link.label }}
                                 </Link>
                             </div>
