@@ -90,7 +90,9 @@ const infoKantor = {
                     <div class="bg-white rounded-2xl p-8 sm:p-10 shadow-card border border-gray-100 relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-kemenag to-kemenag-light"></div>
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="w-12 h-12 bg-kemenag/10 rounded-xl flex items-center justify-center text-2xl">🎯</div>
+                            <div class="w-12 h-12 bg-kemenag/10 rounded-xl flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-bullseye text-kemenag"></i>
+                            </div>
                             <h2 class="text-2xl font-bold text-gray-900">Visi</h2>
                         </div>
                         <p class="text-gray-700 leading-relaxed text-base italic border-l-4 border-kemenag/30 pl-5">
@@ -102,7 +104,9 @@ const infoKantor = {
                     <div class="bg-white rounded-2xl p-8 sm:p-10 shadow-card border border-gray-100 relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-accent to-amber-400"></div>
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-2xl">🚀</div>
+                            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-rocket text-accent"></i>
+                            </div>
                             <h2 class="text-2xl font-bold text-gray-900">Misi</h2>
                         </div>
                         <ol class="space-y-4">
