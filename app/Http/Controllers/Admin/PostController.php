@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Post;
-use Illuminate\Support\Str;
+use App\Services\HtmlSanitizer;
+use App\Services\SlugGenerator;
 use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
@@ -30,7 +31,8 @@ class PostController extends Controller
             'image' => 'nullable|file|mimes:jpeg,png,jpg,gif,webp|max:10240', // Maks 10MB
         ]);
 
-        $validated['slug'] = Str::slug($validated['title']);
+        $validated['slug'] = SlugGenerator::unique($validated['title'], new Post);
+        $validated['content'] = HtmlSanitizer::clean($validated['content']);
 
         if ($request->hasFile('image')) {
             $validated['image_path'] = $request->file('image')->store('posts', 'public');
@@ -58,7 +60,8 @@ class PostController extends Controller
             'delete_image' => 'nullable|boolean',
         ]);
 
-        $validated['slug'] = Str::slug($validated['title']);
+        $validated['slug'] = SlugGenerator::unique($validated['title'], new Post, $post->id);
+        $validated['content'] = HtmlSanitizer::clean($validated['content']);
 
         // Jika user mencentang hapus gambar ATAU mengupload gambar baru
         if ($request->boolean('delete_image') || $request->hasFile('image')) {

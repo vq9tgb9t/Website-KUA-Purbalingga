@@ -67,10 +67,9 @@ Route::post('/kabar/{post:slug}/comments', function (Request $request, Post $pos
     $existingComment = Comment::where('email', $validated['email'])->first();
 
     if ($existingComment) {
-        // Jika sudah ada, pastikan namanya sama (case-insensitive)
         if (strtolower($existingComment->name) !== strtolower($validated['name'])) {
             return back()->withErrors([
-                'name' => 'Gagal: Email ini sudah terdaftar atas nama "' . $existingComment->name . '". Gunakan nama tersebut atau email yang berbeda.'
+                'name' => 'Email ini sudah digunakan. Pastikan nama Anda sesuai dengan komentar sebelumnya, atau gunakan email lain.'
             ])->withInput();
         }
         
@@ -81,16 +80,16 @@ Route::post('/kabar/{post:slug}/comments', function (Request $request, Post $pos
     $post->comments()->create($validated);
 
     return back();
-})->name('comments.store');
+})->middleware('throttle:5,1')->name('comments.store');
 
 Route::get('/dashboard', function () {
     $posts = Post::withCount('comments')->latest()->get();
     return Inertia::render('Dashboard', [
         'posts' => $posts
     ]);
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified', 'admin'])->name('dashboard');
 
-Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function () {
+Route::middleware(['auth', 'verified', 'admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::resource('posts', AdminPostController::class)->except(['show']);
 
     // Manajemen Komentar
