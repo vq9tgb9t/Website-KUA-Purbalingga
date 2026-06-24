@@ -1,12 +1,11 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\PostController as AdminPostController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use Illuminate\Http\Request;
-
 use App\Models\Post;
 use App\Models\Comment;
 
@@ -56,31 +55,9 @@ Route::get('/kabar/{post:slug}', function (Post $post) {
     ]);
 })->name('posts.show');
 
-Route::post('/kabar/{post:slug}/comments', function (Request $request, Post $post) {
-    $validated = $request->validate([
-        'name' => 'required|string|max:255',
-        'email' => 'required|email|max:255',
-        'content' => 'required|string',
-    ]);
-
-    // Cek apakah email sudah pernah digunakan sebelumnya
-    $existingComment = Comment::where('email', $validated['email'])->first();
-
-    if ($existingComment) {
-        if (strtolower($existingComment->name) !== strtolower($validated['name'])) {
-            return back()->withErrors([
-                'name' => 'Email ini sudah digunakan. Pastikan nama Anda sesuai dengan komentar sebelumnya, atau gunakan email lain.'
-            ])->withInput();
-        }
-        
-        // Opsional: Pastikan nama persis sama dengan yang ada di database (huruf besar/kecilnya)
-        $validated['name'] = $existingComment->name;
-    }
-
-    $post->comments()->create($validated);
-
-    return back();
-})->middleware('throttle:5,1')->name('comments.store');
+Route::post('/kabar/{post:slug}/comments', [CommentController::class, 'store'])
+    ->middleware('throttle:5,1')
+    ->name('comments.store');
 
 Route::get('/dashboard', function () {
     $posts = Post::withCount('comments')->latest()->get();
