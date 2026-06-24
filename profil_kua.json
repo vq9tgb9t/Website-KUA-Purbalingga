@@ -1,0 +1,239 @@
+{
+  "type": "FRAME",
+  "name": "Halaman Profil KUA",
+  "x": 0,
+  "y": 0,
+  "width": 1440,
+  "height": 1200,
+  "fills": [
+    {
+      "type": "SOLID",
+      "color": { "r": 0.96, "g": 0.96, "b": 0.96 }
+    }
+  ],
+  "children": [
+    {
+      "type": "FRAME",
+      "name": "Header",
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 80,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": { "r": 1, "g": 1, "b": 1 }
+        }
+      ],
+      "children": [
+        {
+          "type": "TEXT",
+          "name": "Logo Text",
+          "x": 100,
+          "y": 28,
+          "characters": "KUA Purbalingga",
+          "fontSize": 24,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": { "r": 0.1, "g": 0.5, "b": 0.3 }
+            }
+          ]
+        },
+        {
+          "type": "TEXT",
+          "name": "Navigasi",
+          "x": 1000,
+          "y": 32,
+          "characters": "Beranda    Profil    Layanan    Kontak",
+          "fontSize": 16,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": { "r": 0.2, "g": 0.2, "b": 0.2 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "FRAME",
+      "name": "Hero Section",
+      "x": 100,
+      "y": 120,
+      "width": 1240,
+      "height": 300,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": { "r": 0.15, "g": 0.6, "b": 0.35 }
+        }
+      ],
+      "cornerRadius": 16,
+      "children": [
+        {
+          "type": "TEXT",
+          "name": "Title",
+          "x": 60,
+          "y": 100,
+          "characters": "Profil KUA Kecamatan Purbalingga",
+          "fontSize": 48,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": { "r": 1, "g": 1, "b": 1 }
+            }
+          ]
+        },
+        {
+          "type": "TEXT",
+          "name": "Subtitle",
+          "x": 60,
+          "y": 170,
+          "characters": "Melayani masyarakat dengan ikhlas, transparan, dan profesional",
+          "fontSize": 20,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": { "r": 0.9, "g": 0.9, "b": 0.9 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TEXT",
+      "name": "Visi Misi Title",
+      "x": 100,
+      "y": 480,
+      "characters": "Visi & Misi",
+      "fontSize": 32,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": { "r": 0.1, "g": 0.1, "b": 0.1 }
+        }
+      ]
+    },
+    {
+      "type": "FRAME",
+      "name": "Visi Card",
+      "x": 100,
+      "y": 540,
+      "width": 600,
+      "height": 200,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": { "r": 1, "g": 1, "b": 1 }
+        }
+      ],
+      "cornerRadius": 12,
+      "children": [
+        {
+          "type": "TEXT",
+          "name": "Visi Heading",
+          "x": 30,
+          "y": 30,
+          "characters": "Visi",
+          "fontSize": 24,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": { "r": 0.1, "g": 0.5, "b": 0.3 }
+            }
+          ]
+        },
+        {
+          "type": "TEXT",
+          "name": "Visi Text",
+          "x": 30,
+          "y": 80,
+          "characters": "Terwujudnya masyarakat Kecamatan Purbalingga yang taat beragama, maju, sejahtera, dan cerdas, serta saling menghargai.",
+          "fontSize": 16,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": { "r": 0.3, "g": 0.3, "b": 0.3 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "FRAME",
+      "name": "Misi Card",
+      "x": 740,
+      "y": 540,
+      "width": 600,
+      "height": 200,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": { "r": 1, "g": 1, "b": 1 }
+        }
+      ],
+      "cornerRadius": 12,
+      "children": [
+        {
+          "type": "TEXT",
+          "name": "Misi Heading",
+          "x": 30,
+          "y": 30,
+          "characters": "Misi",
+          "fontSize": 24,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": { "r": 0.1, "g": 0.5, "b": 0.3 }
+            }
+          ]
+        },
+        {
+          "type": "TEXT",
+          "name": "Misi Text",
+          "x": 30,
+          "y": 80,
+          "characters": "1. Meningkatkan kualitas bimbingan beragama.\n2. Memberikan pelayanan nikah dan rujuk yang prima.\n3. Memberdayakan lembaga keagamaan dan penyuluhan.",
+          "fontSize": 16,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": { "r": 0.3, "g": 0.3, "b": 0.3 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "FRAME",
+      "name": "Footer",
+      "x": 0,
+      "y": 1000,
+      "width": 1440,
+      "height": 200,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": { "r": 0.1, "g": 0.1, "b": 0.1 }
+        }
+      ],
+      "children": [
+        {
+          "type": "TEXT",
+          "name": "Footer Text",
+          "x": 100,
+          "y": 80,
+          "characters": "© 2026 KUA Kecamatan Purbalingga. All rights reserved.\nAlamat: Jl. Letkol Isdiman No. 12, Purbalingga",
+          "fontSize": 16,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": { "r": 0.8, "g": 0.8, "b": 0.8 }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

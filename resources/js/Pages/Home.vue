@@ -3,18 +3,6 @@ import MainLayout from '@/Layouts/MainLayout.vue';
 import { Head, Link } from '@inertiajs/vue3';
 import { ref } from 'vue';
 
-// Data program layanan (9 layanan utama sesuai website lama)
-const services = [
-    { name: 'Pendaftaran Nikah', icon: 'fa-solid fa-ring', desc: 'Daftar nikah secara online' },
-    { name: 'Duplikat Buku Nikah', icon: 'fa-solid fa-file-contract', desc: 'Pengajuan duplikat buku nikah' },
-    { name: 'Bimbingan Perkawinan', icon: 'fa-solid fa-people-roof', desc: 'Konseling pra-nikah' },
-    { name: 'Rekomendasi Nikah', icon: 'fa-solid fa-file-invoice', desc: 'Surat rekomendasi menikah' },
-    { name: 'Pendaftaran Wakaf', icon: 'fa-solid fa-mosque', desc: 'Daftarkan tanah wakaf Anda' },
-    { name: 'ID Masjid / Mushalla', icon: 'fa-solid fa-landmark', desc: 'Pendataan masjid & mushalla' },
-    { name: 'Madrasah Diniyah', icon: 'fa-solid fa-book-open', desc: 'Informasi madrasah diniyah' },
-    { name: 'Majelis Taklim', icon: 'fa-solid fa-graduation-cap', desc: 'Pendaftaran majelis taklim' },
-    { name: 'Manasik Haji', icon: 'fa-solid fa-kaaba', desc: 'Bimbingan manasik haji' },
-];
 
 // Menerima prop dari server (Inertia)
 defineProps({
@@ -48,7 +36,7 @@ const getExcerpt = (content) => {
     <Head title="Beranda" />
     <MainLayout>
         <!-- ============ HERO SECTION ============ -->
-        <section class="relative overflow-hidden bg-gradient-to-br from-kemenag-dark via-kemenag to-kemenag-light">
+        <section class="relative bg-gradient-to-br from-kemenag-dark via-kemenag to-kemenag-light">
             <!-- Pattern overlay islami (geometris halus) -->
             <div class="absolute inset-0 opacity-[0.07]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
             
@@ -72,21 +60,17 @@ const getExcerpt = (content) => {
 
                     <!-- CTA Buttons -->
                     <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-                        <a href="https://lynk.id/kuapurbalingga" target="_blank" rel="noopener noreferrer"
-                           class="px-8 py-3.5 bg-white text-kemenag-dark font-bold text-sm rounded-pill shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all duration-300 transform hover:-translate-y-0.5">
-                            <i class="fa-solid fa-landmark mr-1.5"></i> Akses Layanan Online
-                        </a>
-                        <a href="#layanan" 
+                        <a href="#jadwal" 
                            class="px-8 py-3.5 bg-white/10 backdrop-blur-sm text-white font-semibold text-sm rounded-pill border border-white/30 hover:bg-white/20 transition-all duration-300">
-                            Lihat Layanan Kami
+                            <i class="fa-regular fa-calendar mr-1.5"></i> Lihat Jadwal KUA
                         </a>
                     </div>
                 </div>
             </div>
 
             <!-- Wave divider -->
-            <div class="absolute bottom-0 left-0 right-0">
-                <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+            <div class="absolute bottom-[-2px] left-0 right-0 z-10">
+                <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block translate-y-[1px]">
                     <path d="M0 80L60 74.7C120 69.3 240 58.7 360 53.3C480 48 600 48 720 53.3C840 58.7 960 69.3 1080 69.3C1200 69.3 1320 58.7 1380 53.3L1440 48V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0Z" fill="#F8FAFC"/>
                 </svg>
             </div>
@@ -107,38 +91,20 @@ const getExcerpt = (content) => {
             </div>
         </section>
 
-        <!-- ============ PROGRAM LAYANAN (9 LAYANAN) ============ -->
-        <section id="layanan" class="bg-background pb-16">
+        <!-- ============ JADWAL KEGIATAN KUA (GOOGLE CALENDAR) ============ -->
+        <section id="jadwal" class="bg-background pb-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Section Header -->
                 <div class="text-center mb-10">
-                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Program Layanan</h2>
-                    <p class="mt-2 text-sm text-gray-500">Berbagai layanan keagamaan yang kami sediakan untuk masyarakat</p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Jadwal Kegiatan KUA</h2>
+                    <p class="mt-2 text-sm text-gray-500">Informasi jadwal pelayanan dan kegiatan KUA Kecamatan Purbalingga</p>
                 </div>
 
-                <!-- Grid 9 Layanan -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <a v-for="(service, index) in services" 
-                       :key="index"
-                       href="https://lynk.id/kuapurbalingga" 
-                       target="_blank" 
-                       rel="noopener noreferrer"
-                       class="group bg-white rounded-2xl p-5 shadow-card border border-gray-100 hover:border-kemenag/30 hover:shadow-md transition-all duration-300 flex items-center gap-4"
-                    >
-                        <!-- Ikon -->
-                        <div class="w-12 h-12 bg-kemenag/10 group-hover:bg-kemenag/20 rounded-xl flex items-center justify-center text-xl transition-colors shrink-0">
-                            <i :class="[service.icon, 'text-kemenag']"></i>
-                        </div>
-                        <!-- Text -->
-                        <div>
-                            <h3 class="font-semibold text-gray-800 text-sm group-hover:text-kemenag transition-colors">{{ service.name }}</h3>
-                            <p class="text-xs text-gray-500 mt-0.5">{{ service.desc }}</p>
-                        </div>
-                        <!-- Arrow -->
-                        <svg class="w-5 h-5 text-gray-300 group-hover:text-kemenag ml-auto shrink-0 transition-all group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </a>
+                <!-- Google Calendar Embed -->
+                <div class="bg-white rounded-2xl p-2 sm:p-4 shadow-card border border-gray-100 overflow-hidden">
+                    <div class="relative w-full" style="padding-bottom: 75%; min-height: 500px;">
+                        <iframe src="https://calendar.google.com/calendar/u/0/newembed?color=%239fe1e7&src=kuakcpurbalingga@gmail.com" style="border: 0" class="absolute top-0 left-0 w-full h-full rounded-xl" frameborder="0" scrolling="no"></iframe>
+                    </div>
                 </div>
             </div>
         </section>
@@ -155,7 +121,7 @@ const getExcerpt = (content) => {
                     <div class="relative w-full" style="padding-bottom: 56.25%;">
                         <iframe 
                             class="absolute top-0 left-0 w-full h-full"
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            src="https://www.youtube.com/embed/M0x7-d-ZIFA" 
                             title="Profil KUA Kecamatan Purbalingga"
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

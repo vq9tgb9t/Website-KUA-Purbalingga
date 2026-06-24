@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Kabar - KUA Kecamatan Purbalingga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        kemenag: { DEFAULT: '#0A5C36', dark: '#073E24', light: '#128751' },
+                        accent: { DEFAULT: '#D4AF37' },
+                        background: '#F8FAFC',
+                    },
+                    boxShadow: {
+                        card: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        floating: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                    },
+                    borderRadius: { pill: '50rem' },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-background font-sans text-gray-800">
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="beranda.html" class="flex items-center gap-3 group">
+                <img src="/images/logo_kemenag.png" alt="Logo Kemenag Purbalingga" class="h-10 w-10 object-contain drop-shadow-sm group-hover:drop-shadow transition-all" />
+                <div class="flex flex-col">
+                    <span class="font-bold text-base sm:text-lg text-kemenag-dark tracking-tight leading-tight">KUA Kecamatan</span>
+                    <span class="text-[10px] sm:text-xs text-gray-500 font-medium -mt-0.5">Purbalingga</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-1">
+                <a href="beranda.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-600 hover:text-kemenag hover:bg-kemenag/5">Beranda</a>
+                <a href="profil.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-600 hover:text-kemenag hover:bg-kemenag/5">Profil</a>
+                <a href="struktur-organisasi.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-600 hover:text-kemenag hover:bg-kemenag/5">Struktur Organisasi</a>
+                <a href="kabar-kua.html" class="flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-kemenag bg-kemenag/10 font-semibold">Kabar KUA</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gradient-to-b from-kemenag-light/10 to-white pt-12 pb-8 border-b border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="flex justify-center items-center gap-3 mb-6">
+                    <span class="bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">
+                        Berita KUA
+                    </span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight mb-6">
+                    Kegiatan Bimbingan Perkawinan Pra Nikah Angkatan I
+                </h1>
+                <div class="flex items-center justify-center gap-4 text-sm text-gray-500 font-medium">
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-regular fa-calendar"></i> 23 Juni 2026
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="w-full aspect-video bg-gradient-to-br from-gray-100 to-gray-50 rounded-3xl overflow-hidden mb-12 border border-gray-100 shadow-sm flex items-center justify-center relative">
+                    <i class="fa-regular fa-image text-6xl text-gray-300"></i>
+                </div>
+
+                <article class="prose prose-lg prose-kemenag max-w-none text-gray-700 leading-relaxed ql-editor-content text-justify">
+                    <p>Kantor Urusan Agama (KUA) Kecamatan Purbalingga sukses menyelenggarakan kegiatan Bimbingan Perkawinan (Bimwin) Pra Nikah bagi calon pengantin.</p>
+                    <p>Kegiatan ini merupakan program wajib dari Kementerian Agama yang bertujuan untuk memberikan bekal pengetahuan, pemahaman, dan keterampilan kepada calon pengantin agar siap mengarungi bahtera rumah tangga yang sakinah, mawaddah, wa rahmah.</p>
+                </article>
+
+                <div class="mt-16 pt-12 border-t border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">Komentar (1)</h3>
+
+                    <div class="space-y-6 mb-12">
+                        <div class="bg-gray-50 rounded-2xl p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-kemenag/10 text-kemenag rounded-full flex items-center justify-center font-bold text-lg">
+                                    B
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Budi Santoso</h4>
+                                    <p class="text-xs text-gray-500">23 Juni 2026</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">Sangat informatif. Terima kasih KUA Purbalingga.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+                        <h4 class="text-lg font-bold text-gray-900 mb-6">Tinggalkan Komentar</h4>
+                        <form class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nama *</label>
+                                    <input type="text" class="w-full rounded-lg border-gray-300 shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                                    <input type="email" class="w-full rounded-lg border-gray-300 shadow-sm">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Komentar *</label>
+                                <textarea rows="4" class="w-full rounded-lg border-gray-300 shadow-sm"></textarea>
+                            </div>
+                            <div class="text-right">
+                                <button type="button" class="px-6 py-2 bg-kemenag text-white font-semibold rounded-lg shadow-sm">
+                                    Kirim Komentar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="mt-16 pt-8 border-t border-gray-100 flex justify-center">
+                    <a href="kabar-kua.html" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-50 hover:bg-gray-100 text-gray-700 font-medium rounded-full transition-colors">
+                        <i class="fa-solid fa-arrow-left"></i> Kembali ke Kabar KUA
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-kemenag-dark text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-white/50">&copy; 2026 KUA Kecamatan Purbalingga. Seluruh hak cipta dilindungi.</p>
+                <div class="flex items-center gap-4 text-xs text-white/30">
+                    <span>#BersihMelayani</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

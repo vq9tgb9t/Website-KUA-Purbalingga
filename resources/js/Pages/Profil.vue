@@ -58,7 +58,7 @@ const infoKantor = {
     <Head title="Profil KUA" />
     <MainLayout>
         <!-- ============ HERO PROFIL ============ -->
-        <section class="relative overflow-hidden bg-gradient-to-br from-kemenag-dark via-kemenag to-kemenag-light py-16 sm:py-24">
+        <section class="relative bg-gradient-to-br from-kemenag-dark via-kemenag to-kemenag-light py-16 sm:py-24">
             <div class="absolute inset-0 opacity-[0.07]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
             <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/15 backdrop-blur-sm rounded-full text-white/90 text-xs font-medium mb-6 border border-white/20">
@@ -75,8 +75,8 @@ const infoKantor = {
                 </p>
             </div>
             <!-- Wave divider -->
-            <div class="absolute bottom-0 left-0 right-0">
-                <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+            <div class="absolute bottom-[-2px] left-0 right-0 z-10">
+                <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block translate-y-[1px]">
                     <path d="M0 80L60 74.7C120 69.3 240 58.7 360 53.3C480 48 600 48 720 53.3C840 58.7 960 69.3 1080 69.3C1200 69.3 1320 58.7 1380 53.3L1440 48V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0Z" fill="#F8FAFC"/>
                 </svg>
             </div>

@@ -40,9 +40,7 @@ const isActive = (href) => {
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
                 <!-- Logo & Brand -->
                 <Link href="/" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 bg-gradient-to-br from-kemenag to-kemenag-dark rounded-full flex items-center justify-center text-white font-bold text-xs shadow-md group-hover:shadow-lg transition-shadow">
-                        KUA
-                    </div>
+                    <img src="/images/logo_kemenag.png" alt="Logo Kemenag Purbalingga" class="h-10 w-10 object-contain drop-shadow-sm group-hover:drop-shadow transition-all" />
                     <div class="flex flex-col">
                         <span class="font-bold text-base sm:text-lg text-kemenag-dark tracking-tight leading-tight">KUA Kecamatan</span>
                         <span class="text-[10px] sm:text-xs text-gray-500 font-medium -mt-0.5">Purbalingga</span>
@@ -66,9 +64,12 @@ const isActive = (href) => {
                     </Link>
 
                     <!-- Dropdown Kabar KUA (Desktop) -->
-                    <div class="relative" @mouseenter="kabarDropdownOpen = true" @mouseleave="kabarDropdownOpen = false">
-                        <button :class="[
-                            'flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200',
+                    <div class="relative">
+                        <!-- Transparan Overlay untuk menutup dropdown jika klik di luar -->
+                        <div v-if="kabarDropdownOpen" @click="kabarDropdownOpen = false" class="fixed inset-0 z-40"></div>
+                        
+                        <button @click="kabarDropdownOpen = !kabarDropdownOpen" :class="[
+                            'relative z-50 flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200',
                             isKabarActive 
                                 ? 'text-kemenag bg-kemenag/10 font-semibold' 
                                 : 'text-gray-600 hover:text-kemenag hover:bg-kemenag/5'
@@ -91,6 +92,7 @@ const isActive = (href) => {
                                     v-for="link in kabarLinks" 
                                     :key="link.href" 
                                     :href="link.href"
+                                    @click="kabarDropdownOpen = false"
                                     class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:text-kemenag hover:bg-kemenag/5 transition-colors"
                                 >
                                     <span class="text-sm flex items-center justify-center w-5 h-5"><i :class="link.icon"></i></span>
@@ -168,7 +170,6 @@ const isActive = (href) => {
                                 </Link>
                             </div>
                         </div>
-
                         <a href="https://lynk.id/kuapurbalingga" target="_blank" rel="noopener noreferrer"
                            class="block text-center mt-2 px-5 py-3 bg-kemenag hover:bg-kemenag-dark text-white text-sm font-semibold rounded-pill transition shadow-sm">
                             Layanan Online
@@ -190,9 +191,7 @@ const isActive = (href) => {
                     <!-- Kolom 1: Info KUA -->
                     <div>
                         <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-xs">
-                                KUA
-                            </div>
+                            <img src="/images/logo_kemenag.png" alt="Logo Kemenag Purbalingga" class="h-10 w-10 bg-white/90 p-1 rounded-md" />
                             <span class="font-bold text-lg">KUA Kec. Purbalingga</span>
                         </div>
                         <p class="text-sm text-white/70 leading-relaxed">

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabar KUA - KUA Kecamatan Purbalingga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        kemenag: { DEFAULT: '#0A5C36', dark: '#073E24', light: '#128751' },
+                        accent: { DEFAULT: '#D4AF37' },
+                        background: '#F8FAFC',
+                    },
+                    boxShadow: {
+                        card: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        floating: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                    },
+                    borderRadius: { pill: '50rem' },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-background font-sans text-gray-800">
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="beranda.html" class="flex items-center gap-3 group">
+                <img src="/images/logo_kemenag.png" alt="Logo Kemenag Purbalingga" class="h-10 w-10 object-contain drop-shadow-sm group-hover:drop-shadow transition-all" />
+                <div class="flex flex-col">
+                    <span class="font-bold text-base sm:text-lg text-kemenag-dark tracking-tight leading-tight">KUA Kecamatan</span>
+                    <span class="text-[10px] sm:text-xs text-gray-500 font-medium -mt-0.5">Purbalingga</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-1">
+                <a href="beranda.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-600 hover:text-kemenag hover:bg-kemenag/5">Beranda</a>
+                <a href="profil.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-600 hover:text-kemenag hover:bg-kemenag/5">Profil</a>
+                <a href="struktur-organisasi.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-600 hover:text-kemenag hover:bg-kemenag/5">Struktur Organisasi</a>
+                <a href="kabar-kua.html" class="flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-kemenag bg-kemenag/10 font-semibold">Kabar KUA</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gradient-to-b from-kemenag-light/20 to-white py-12 sm:py-20 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">Kabar KUA</h1>
+                <p class="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+                    Berita dan informasi terkini seputar kegiatan Kantor Urusan Agama Kecamatan Purbalingga.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-12 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Grid Kartu Berita -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Dummy Card 1 -->
+                    <a href="detail-kabar.html" class="group bg-white rounded-2xl overflow-hidden shadow-card border border-gray-100 hover:shadow-lg hover:border-kemenag/30 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="h-52 bg-gradient-to-br from-kemenag/10 to-kemenag/5 flex items-center justify-center relative overflow-hidden">
+                            <i class="fa-regular fa-image text-4xl text-kemenag/20"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Berita KUA</span>
+                                <span class="text-sm text-gray-400 font-medium">23 Juni 2026</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 leading-snug group-hover:text-kemenag transition-colors line-clamp-2">
+                                Kegiatan Bimbingan Perkawinan Pra Nikah
+                            </h3>
+                            <p class="mt-3 text-base text-gray-600 leading-relaxed line-clamp-3">
+                                KUA Kecamatan Purbalingga sukses menyelenggarakan kegiatan bimbingan perkawinan pra nikah bagi 50 pasang calon pengantin.
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Dummy Card 2 -->
+                    <a href="detail-kabar.html" class="group bg-white rounded-2xl overflow-hidden shadow-card border border-gray-100 hover:shadow-lg hover:border-kemenag/30 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="h-52 bg-gradient-to-br from-kemenag/10 to-kemenag/5 flex items-center justify-center relative overflow-hidden">
+                            <i class="fa-regular fa-image text-4xl text-kemenag/20"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Urab Mendoan</span>
+                                <span class="text-sm text-gray-400 font-medium">20 Juni 2026</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 leading-snug group-hover:text-kemenag transition-colors line-clamp-2">
+                                Penyaluran Bantuan Sosial Urab Mendoan
+                            </h3>
+                            <p class="mt-3 text-base text-gray-600 leading-relaxed line-clamp-3">
+                                Program Urab Mendoan kembali menyalurkan bantuan kepada warga sekitar yang membutuhkan.
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Dummy Card 3 -->
+                    <a href="detail-kabar.html" class="group bg-white rounded-2xl overflow-hidden shadow-card border border-gray-100 hover:shadow-lg hover:border-kemenag/30 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="h-52 bg-gradient-to-br from-kemenag/10 to-kemenag/5 flex items-center justify-center relative overflow-hidden">
+                            <i class="fa-regular fa-image text-4xl text-kemenag/20"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Artikel</span>
+                                <span class="text-sm text-gray-400 font-medium">15 Juni 2026</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 leading-snug group-hover:text-kemenag transition-colors line-clamp-2">
+                                Pentingnya Membangun Keluarga Sakinah
+                            </h3>
+                            <p class="mt-3 text-base text-gray-600 leading-relaxed line-clamp-3">
+                                Membangun keluarga yang sakinah, mawaddah, wa rahmah adalah dambaan setiap pasangan muslim.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-kemenag-dark text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-white/50">&copy; 2026 KUA Kecamatan Purbalingga. Seluruh hak cipta dilindungi.</p>
+                <div class="flex items-center gap-4 text-xs text-white/30">
+                    <span>#BersihMelayani</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

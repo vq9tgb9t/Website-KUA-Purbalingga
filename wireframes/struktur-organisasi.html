@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Organisasi - KUA Kecamatan Purbalingga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        kemenag: { DEFAULT: '#0A5C36', dark: '#073E24', light: '#128751' },
+                        accent: { DEFAULT: '#D4AF37' },
+                        background: '#F8FAFC',
+                    },
+                    boxShadow: {
+                        card: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        floating: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                    },
+                    borderRadius: { pill: '50rem' },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-background font-sans text-gray-800">
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="beranda.html" class="flex items-center gap-3 group">
+                <img src="/images/logo_kemenag.png" alt="Logo Kemenag Purbalingga" class="h-10 w-10 object-contain drop-shadow-sm group-hover:drop-shadow transition-all" />
+                <div class="flex flex-col">
+                    <span class="font-bold text-base sm:text-lg text-kemenag-dark tracking-tight leading-tight">KUA Kecamatan</span>
+                    <span class="text-[10px] sm:text-xs text-gray-500 font-medium -mt-0.5">Purbalingga</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-1">
+                <a href="beranda.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-600 hover:text-kemenag hover:bg-kemenag/5">Beranda</a>
+                <a href="profil.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-600 hover:text-kemenag hover:bg-kemenag/5">Profil</a>
+                <a href="struktur-organisasi.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-kemenag bg-kemenag/10 font-semibold">Struktur Organisasi</a>
+                <a href="kabar-kua.html" class="flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-600 hover:text-kemenag hover:bg-kemenag/5">Kabar KUA</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative bg-gradient-to-br from-kemenag-dark via-kemenag to-kemenag-light py-16 sm:py-24">
+            <div class="absolute inset-0 opacity-[0.07]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+            <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
+                    Struktur Organisasi
+                </h1>
+                <p class="mt-5 text-base sm:text-lg text-white/80 leading-relaxed max-w-2xl mx-auto">
+                    Untuk menunjang efektivitas pelayanan publik di bidang keagamaan, KUA Kecamatan Purbalingga 
+                    menerapkan struktur organisasi yang rapi dan fungsional.
+                </p>
+            </div>
+            <div class="absolute bottom-[-2px] left-0 right-0 z-10">
+                <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block translate-y-[1px]">
+                    <path d="M0 80L60 74.7C120 69.3 240 58.7 360 53.3C480 48 600 48 720 53.3C840 58.7 960 69.3 1080 69.3C1200 69.3 1320 58.7 1380 53.3L1440 48V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0Z" fill="#F8FAFC"/>
+                </svg>
+            </div>
+        </section>
+
+        <section class="bg-background py-16 sm:py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Pimpinan</h2>
+                    <p class="mt-2 text-sm text-gray-500">Kepala Kantor Urusan Agama Kecamatan Purbalingga</p>
+                </div>
+
+                <div class="max-w-md mx-auto">
+                    <div class="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden text-center relative">
+                        <div class="h-2 bg-gradient-to-r from-kemenag to-kemenag-light"></div>
+                        <div class="p-8">
+                            <div class="w-28 h-28 mx-auto bg-gradient-to-br from-kemenag/20 to-kemenag/10 rounded-full flex items-center justify-center mb-5 ring-4 ring-kemenag/10">
+                                <i class="fa-solid fa-user text-3xl text-kemenag/50"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Abdul Latip, S.Ag</h3>
+                            <p class="text-kemenag font-semibold text-sm mt-2">Kepala KUA Kecamatan Purbalingga</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="bg-white py-12 sm:py-16">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-kemenag/10 rounded-full text-kemenag text-xs font-semibold mb-4">
+                        <i class="fa-solid fa-ring"></i> Pelayanan Nikah & Rujuk
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Penghulu</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                    <div class="group bg-gray-50 hover:bg-white rounded-2xl p-6 border border-gray-100 text-center">
+                        <div class="w-20 h-20 mx-auto bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-user text-xl text-kemenag/30"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-sm leading-snug">Abdul Latip, S.Ag</h3>
+                        <p class="text-kemenag text-xs font-semibold mt-1.5">Penghulu</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-kemenag-dark text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-white/50">&copy; 2026 KUA Kecamatan Purbalingga. Seluruh hak cipta dilindungi.</p>
+                <div class="flex items-center gap-4 text-xs text-white/30">
+                    <span>#BersihMelayani</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - KUA Kecamatan Purbalingga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        kemenag: { DEFAULT: '#0A5C36', dark: '#073E24', light: '#128751' },
+                        accent: { DEFAULT: '#D4AF37' },
+                        background: '#F8FAFC',
+                    },
+                    boxShadow: {
+                        card: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        floating: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                    },
+                    borderRadius: { pill: '50rem' },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-background font-sans text-gray-800">
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="beranda.html" class="flex items-center gap-3 group">
+                <img src="/images/logo_kemenag.png" alt="Logo Kemenag" class="h-10 w-10 object-contain drop-shadow-sm group-hover:drop-shadow transition-all" />
+                <div class="flex flex-col">
+                    <span class="font-bold text-base sm:text-lg text-kemenag-dark tracking-tight leading-tight">KUA Kecamatan</span>
+                    <span class="text-[10px] sm:text-xs text-gray-500 font-medium -mt-0.5">Purbalingga</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-1">
+                <a href="beranda.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-kemenag bg-kemenag/10 font-semibold">Beranda</a>
+                <a href="profil.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-600 hover:text-kemenag hover:bg-kemenag/5">Profil</a>
+                <a href="struktur-organisasi.html" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-600 hover:text-kemenag hover:bg-kemenag/5">Struktur Organisasi</a>
+                <a href="kabar-kua.html" class="flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-gray-600 hover:text-kemenag hover:bg-kemenag/5">Kabar KUA</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative bg-gradient-to-br from-kemenag-dark via-kemenag to-kemenag-light">
+            <div class="absolute inset-0 opacity-[0.07]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/15 backdrop-blur-sm rounded-full text-white/90 text-xs font-medium mb-6 border border-white/20">
+                        <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+                        #BersihMelayani
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
+                        Kantor Urusan Agama
+                        <span class="block mt-1 text-accent">Kecamatan Purbalingga</span>
+                    </h1>
+                    <p class="mt-5 text-base sm:text-lg text-white/80 leading-relaxed max-w-2xl mx-auto">
+                        Melayani masyarakat dengan sepenuh hati dalam bidang keagamaan, 
+                        pernikahan, perwakafan, dan pembinaan keluarga sakinah.
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+                        <a href="#jadwal" class="px-8 py-3.5 bg-white/10 backdrop-blur-sm text-white font-semibold text-sm rounded-pill border border-white/30 hover:bg-white/20 transition-all duration-300">
+                            <i class="fa-regular fa-calendar mr-1.5"></i> Lihat Jadwal KUA
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-[-2px] left-0 right-0 z-10">
+                <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block translate-y-[1px]">
+                    <path d="M0 80L60 74.7C120 69.3 240 58.7 360 53.3C480 48 600 48 720 53.3C840 58.7 960 69.3 1080 69.3C1200 69.3 1320 58.7 1380 53.3L1440 48V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0Z" fill="#F8FAFC"/>
+                </svg>
+            </div>
+        </section>
+
+        <section class="bg-background py-10 sm:py-14">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="relative bg-white rounded-2xl p-8 sm:p-10 shadow-card border border-gray-100">
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 text-5xl text-accent/30 font-serif">"</span>
+                    <p class="text-gray-700 text-sm sm:text-base italic leading-relaxed mt-2">
+                        "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu 
+                        dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya."
+                    </p>
+                    <p class="mt-4 text-accent font-semibold text-sm">QS. Ar-Rum: 21</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="jadwal" class="bg-background pb-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Jadwal Kegiatan KUA</h2>
+                    <p class="mt-2 text-sm text-gray-500">Informasi jadwal pelayanan dan kegiatan KUA Kecamatan Purbalingga</p>
+                </div>
+                <div class="bg-white rounded-2xl p-2 sm:p-4 shadow-card border border-gray-100 overflow-hidden">
+                    <div class="relative w-full" style="padding-bottom: 75%; min-height: 500px;">
+                        <iframe src="https://calendar.google.com/calendar/u/0/newembed?color=%239fe1e7&src=kuakcpurbalingga@gmail.com" style="border: 0" class="absolute top-0 left-0 w-full h-full rounded-xl" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-kemenag-dark text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="/images/logo_kemenag.png" alt="Logo Kemenag" class="h-10 w-10 bg-white/90 p-1 rounded-md" />
+                        <span class="font-bold text-lg">KUA Kec. Purbalingga</span>
+                    </div>
+                    <p class="text-sm text-white/70 leading-relaxed">Jl. Wiraguna, Purbalingga Kidul, Kec. Purbalingga, Kab. Purbalingga</p>
+                    <p class="text-sm text-white/70 mt-2">kuakcpurbalingga@gmail.com</p>
+                    <p class="text-sm text-white/70">(62) 813-2783-9191</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-base mb-4">Jam Operasional</h4>
+                    <div class="space-y-2 text-sm text-white/70">
+                        <p>Senin – Jumat</p>
+                        <p class="text-white font-medium">07.30 – 16.00 WIB</p>
+                        <p class="mt-3">Sabtu – Minggu</p>
+                        <p class="text-white/50">Tutup</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-base mb-4">Sosial Media</h4>
+                    <div class="space-y-3">
+                        <a href="#" class="flex items-center gap-2 text-sm text-white/70 hover:text-white transition">Instagram</a>
+                        <a href="#" class="flex items-center gap-2 text-sm text-white/70 hover:text-white transition">Facebook</a>
+                        <a href="#" class="flex items-center gap-2 text-sm text-white/70 hover:text-white transition">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-white/50">&copy; 2026 KUA Kecamatan Purbalingga. Seluruh hak cipta dilindungi.</p>
+                <div class="flex items-center gap-4 text-xs text-white/30">
+                    <span>#BersihMelayani</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
